@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistroTimer.CommandLine", "DistroTimer.CommandLine\DistroTimer.CommandLine.csproj", "{FF2074F6-996E-4655-8E98-D94866A698B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistroTimer.Shared", "DistroTimer.Shared\DistroTimer.Shared.csproj", "{20B6C10D-4E48-4549-BBBB-77EA7B242136}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistroTimer.UserInterface", "DistroTimer.UserInterface\DistroTimer.UserInterface.csproj", "{B8D2FA1F-5EB7-49D2-9475-FCC7ABC91985}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF2074F6-996E-4655-8E98-D94866A698B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF2074F6-996E-4655-8E98-D94866A698B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF2074F6-996E-4655-8E98-D94866A698B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF2074F6-996E-4655-8E98-D94866A698B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20B6C10D-4E48-4549-BBBB-77EA7B242136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20B6C10D-4E48-4549-BBBB-77EA7B242136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20B6C10D-4E48-4549-BBBB-77EA7B242136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20B6C10D-4E48-4549-BBBB-77EA7B242136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D2FA1F-5EB7-49D2-9475-FCC7ABC91985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D2FA1F-5EB7-49D2-9475-FCC7ABC91985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D2FA1F-5EB7-49D2-9475-FCC7ABC91985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D2FA1F-5EB7-49D2-9475-FCC7ABC91985}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
