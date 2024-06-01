@@ -8,4 +8,5 @@ public class User
 
     [Required] public required string UserName { get; set; }
     [Required] public required List<DistroData> Distros { get; set; } = [];
+    [Required] public required DateTime DateAdded { get; set; }
 }

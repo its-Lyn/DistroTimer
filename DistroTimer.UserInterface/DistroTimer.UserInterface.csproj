@@ -14,5 +14,4 @@
     <ItemGroup>
       <ProjectReference Include="..\DistroTimer.Shared\DistroTimer.Shared.csproj" />
     </ItemGroup>
-
 </Project>

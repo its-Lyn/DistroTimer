@@ -9,6 +9,11 @@ public static class DistroCommandLine
     {
         var serviceCollection = new ServiceCollection();
         serviceCollection.AddDbContext<DistroContext>();
+        serviceCollection.AutoRegisterFromDistroTimerCommandLine();
         serviceCollection.AutoRegisterFromDistroTimerShared();
+
+        ServiceProvider services = serviceCollection.BuildServiceProvider();
+        services.GetRequiredService<DistroParser>().Parse(args);
+
     }
 }

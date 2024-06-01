@@ -12,11 +12,14 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="CommandLineParser" Version="2.9.1" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Verbs\" />
+      <Compile Update="Parser.cs">
+        <DependentUpon>DistroCommandLine.cs</DependentUpon>
+      </Compile>
     </ItemGroup>
 
 </Project>
