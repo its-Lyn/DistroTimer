@@ -19,7 +19,7 @@ public class ColourManager
       => $"\x1b[1;{(byte)asciiColour}m{text}\x1b[0m";
 
    public string ColourText(string text, TrueColour colour)
-      => $"\x1b[38;2;{colour.R};{colour.B};{colour.G}m{text}\x1b[0m";
+      => $"\x1b[38;2;{colour.R};{colour.G};{colour.B}m{text}\x1b[0m";
 
    public string GetErrorFrom(string text)
       => $"\x1b[1;31mERROR:\x1b[0m {text}";
