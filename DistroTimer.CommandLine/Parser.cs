@@ -11,10 +11,10 @@ namespace DistroTimer.CommandLine;
 public class DistroParser(UsersService users, DistroContext db)
 {
     private readonly ColourManager _colour = new ColourManager();
-
+    
     public void Parse(string[] args)
     {
-        Parser.Default.ParseArguments<UserOptions>(args)
+        Parser.Default.ParseArguments<UserOptions, DistroOptions>(args)
             .WithParsed<UserOptions>(user =>
             {
                 if (user.ListFlag)
@@ -77,6 +77,43 @@ public class DistroParser(UsersService users, DistroContext db)
                 Console.WriteLine(
                     _colour.ColourText($"Successfully deleted user {user.UserName}.", AsciiColour.Green)
                 );
+            })
+            .WithParsed<DistroOptions>(distro =>
+            {
+                if (string.IsNullOrWhiteSpace(distro.UserName))
+                {
+                    Console.WriteLine(_colour.GetErrorFrom("User was not specified.. Please specify a user."));
+                    return;
+                }
+
+                User? user = users.GetUser(distro.UserName);
+                if (user is null)
+                {
+                   Console.WriteLine(_colour.GetErrorFrom("User was not found in the database."));
+                   return;
+                }
+
+                if (distro.ListFlag)
+                {
+                    if (distro.ShowName is not null)
+                    {
+                        Console.WriteLine(_colour.GetErrorFrom("Can't show both all and only one."));
+                        return;
+                    }
+
+                    if (!user.Distros.Any())
+                    {
+                        Console.WriteLine(_colour.GetErrorFrom("There are are no distros registered for this user in the database."));
+                        return;
+                    }
+
+                    foreach (var dist in user.Distros)
+                    {
+                        // TODO: Everything
+                    }
+                }
+                
+                // TODO: Everything
             });
     }
 }

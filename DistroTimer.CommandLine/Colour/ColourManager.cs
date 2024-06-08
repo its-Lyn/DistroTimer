@@ -22,5 +22,5 @@ public class ColourManager
       => $"\x1b[38;2;{colour.R};{colour.G};{colour.B}m{text}\x1b[0m";
 
    public string GetErrorFrom(string text)
-      => $"\x1b[1;31mERROR:\x1b[0m {text}";
+      => $"\x1b[1;{AsciiColour.Red}mERROR:\x1b[0m {text}";
 }
